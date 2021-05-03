@@ -1,13 +1,21 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
-        . . . 2 3 . . . 
-        . . . 4 3 . . . 
-        . . . 2 2 . . . 
-        . . . 3 3 . . . 
-        . . . 2 2 . . . 
-        . . 2 4 4 2 . . 
-        . . 3 4 3 3 . . 
-        . . 2 2 4 2 . . 
+        . . . 2 5 4 2 . . . 
+        . . 2 5 4 5 2 . . . 
+        . 2 5 5 4 5 4 2 . . 
+        . 2 5 4 5 5 4 4 2 . 
+        . 2 5 4 5 2 4 4 2 . 
+        . 2 5 4 5 2 2 4 2 . 
+        . 4 3 4 3 4 2 4 2 . 
+        . 4 3 5 5 3 2 4 2 . 
+        . . 4 3 4 5 3 2 . . 
+        . . . 4 5 4 3 4 . . 
+        . . . . 2 4 5 4 . . 
+        . . . . 2 4 4 . . . 
+        . . . . 2 4 2 . . . 
+        . . . 2 4 2 . . . . 
+        . . 2 4 2 . . . . . 
+        . . 2 2 . . . . . . 
         `, mySprite, 0, -50)
     projectile.setVelocity(0, -100)
 })
@@ -176,3 +184,25 @@ sprites.space.spaceAsteroid3,
 sprites.space.spaceAsteroid2,
 sprites.space.spaceAsteroid0
 ]
+let alien = sprites.create(img`
+    ..........................
+    ....ffff..........ffff....
+    ....f11f..........f11f....
+    ....f11f..........f11f....
+    ....fffffff....fffffff....
+    .......f11f....f11f.......
+    .....fff11ffffff11fff.....
+    .....f11111111111111f.....
+    ...fff11111111111111fff...
+    ...f1111ff111111ff1111f...
+    .fff1111ff111111ff1111fff.
+    .f1111111111111111111111f.
+    .f1111111111111111111111f.
+    .f1fff11111111111111fff1f.
+    .f1f.f1ffffffffffff1f.f1f.
+    .f1f.f1f..........f1f.f1f.
+    .fff.fffffff..fffffff.fff.
+    .......f111f..f111f.......
+    .......fffff..fffff.......
+    ..........................
+    `, SpriteKind.Enemy)
